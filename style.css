@@ -1,0 +1,236 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.cabecalho {
+    background-color: rgb(163, 163, 163);
+    box-shadow: 0 6px 0 #000;
+}
+
+.cabecalho__ul {  
+    display: flex;
+    justify-content: space-around;
+    min-height: 120px;
+    gap: 14px;
+    margin-bottom: 2px;
+    align-items: center;
+    list-style: none; 
+}
+
+.cabecalho__ancora {
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-size: 20px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border-color: #909193;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.4s;
+}
+
+.cabecalho__ancora:hover {
+    border-color: #d169c3;
+    background-color: transparent;
+    color: #fff;
+}
+
+.img {
+    height: 80px;
+}
+
+.section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+        "item-unico item-unico" ;
+    background-image: url(./Img/Papel\ de\ fundo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 65vh;
+}
+
+.section__div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-area: item-unico;
+}
+
+.section__p {
+    font-family:  monospace;
+    padding-bottom: 1rem;
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 0.4px;
+    line-height: 24px;
+    color: white;
+}
+
+.li-ancora {
+    list-style: none; 
+}
+
+.ancora__section {
+    opacity: 100%;
+    font-family:  'Kanit', sans-serif;
+    text-transform: uppercase;
+    color: white;
+    background-color: #FD4265;
+    border: 2px solid transparent;
+    font-size: 22px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.ancora__section:hover {
+    background-color: #f16f87;
+    color: white;
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 0 0 15px #FD4265;
+    text-shadow: 0 0 15px #FD4265;
+} 
+
+.main__container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas:
+        "div__main div__second";
+    box-shadow: -4px -4px 0 black;
+    background: linear-gradient(180deg, #fff, #C4C6C8, #999, #69717a)
+}
+
+.div__main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    min-width: 540px;
+    margin: 0 12px 0 8px;
+    grid-area: div__main;
+    border-radius: 4px;
+    background: linear-gradient(180deg, #fff, #C4C6C8);
+}
+
+.main__img {
+    margin-top: 0.6rem;
+    width: 96%;
+    height: auto;
+}
+
+.main__p {
+    font-family:  'Times New Roman', Times, serif;
+    padding: 1.4rem 0.4rem;
+    text-align: justify;
+    font-size: 16px;
+    letter-spacing: 0.4px;
+    line-height: 24px;
+    color: black;
+}
+
+
+.div__second {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 390px;
+    grid-area: div__second;
+    border-radius: 4px;
+    margin: 0 0.2rem;
+    background: linear-gradient(180deg, #fff, #999 ,#69717a, #69717a);
+}
+
+.div__img {
+    margin-top: 0.6rem;
+    width: 96%;
+    height: auto;
+}
+
+.div__p {
+    font-family:'Times New Roman', Times, serif  ;
+    text-align: center;
+    line-height: 24px;
+    font-size: 18px;
+    padding: 14px 4px;
+    font-weight: 800;
+}
+
+.section-row {
+    display: flex;
+    flex-direction: row;
+    padding: 15px 8px;
+    gap: 4px;
+    align-items: center;
+    justify-content: start;
+    background: linear-gradient(180deg, #69717a, #292929 65%);
+}
+
+.section-container { 
+    width: 100%;
+    height: auto;
+    background-color: white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+.section-img {
+    width: 100%;
+    height: 16rem;
+}
+
+.section-tag {
+    position: absolute;
+    padding: 2px 6px;
+    margin: 6px;
+    background-color: #f16f87;
+    color: #fff;
+    font-weight: 800;
+}
+
+
+@media screen and (min-width: 660px) and (max-width: 780px){
+    .section {
+        min-height: 44vh;
+    }
+
+    .div__main {
+        min-width: 460px;
+    }
+}
+
+@media (max-width: 640px) {
+
+    .section {
+        min-height: 42vh;
+    }
+
+    .section__div {
+        background-size: contain;
+        background-repeat: no-repeat
+    }
+
+    .div__main {
+        min-width: 420px;
+    }
+
+    .div__p {
+        font-size: 14px;
+        padding: 16px 2px;
+    }
+
+    .main__container {
+        grid-template-areas:
+            "div__main"
+            "div__second";
+    }
+
+    .div__second {
+        min-width: 97%;
+        margin: 0 12px 0 8px;
+    }
+}
